@@ -7,7 +7,6 @@ This repository contains code and environment manifests accompanying:
 - `notebooks/`: example training and inference notebooks (sanitized; no patient data).
 - `requirements.txt`: minimal Python dependencies.
 - `environment_manifest.txt`: OS/CUDA/driver notes (optional).
-- `configs/`, `scripts/`: optional runnable references.
 
 ## Data availability
 Patient radiographs are not publicly shareable due to institutional policy.
