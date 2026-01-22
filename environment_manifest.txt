@@ -1,0 +1,22 @@
+# Environment Manifest (fill and include in the archive)
+# -----------------------------------------------
+# Python
+Python version: <3.12.3>
+PyTorch version: <2.6.0+cu118>
+TorchVision version: <0.21.0+cu118>
+Detectron2 commit: 18f69583391e5040043ca4f4bebd2c60f0ebfde0
+CUDA toolkit version: <V11.8.89>
+cuDNN version: <9.1.0>
+GPU model: <e.g., NVIDIA RTX 3070, 8GB>
+Python dependencies file: requirements_min.txt 
+
+# R
+R version: 4.3.1
+R packages (versions):
+  - irr
+  - psych
+  - DescTools
+  - boot
+  - kappaSize
+
+
