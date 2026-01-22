@@ -1,0 +1,31 @@
+# Minimal requirements for keypoint training/inference notebooks (Detectron2 + COCO + OpenCV)
+# GPU build (CUDA 11.8). For CPU-only, see notes below.
+
+# --- Core compute (CUDA 11.8 GPU build) ---
+torch==2.6.0+cu118
+torchvision==0.21.0+cu118
+
+# --- Detectron2 (specific commit used in the notebooks) ---
+detectron2 @ git+https://github.com/facebookresearch/detectron2.git@18f69583391e5040043ca4f4bebd2c60f0ebfde0
+fvcore==0.1.5.post20221221
+iopath==0.1.9
+yacs==0.1.8
+pycocotools==2.0.8
+
+# --- Arrays / imaging / utilities ---
+numpy==1.26.4
+opencv-python-headless==4.11.0.86
+Pillow==11.0.0
+pandas==2.2.3
+matplotlib==3.10.1
+tqdm==4.67.1
+PyYAML==6.0.2
+tabulate==0.9.0  # sometimes imported by detectron2; harmless to include
+
+# ----- Notes -----
+# • CPU-only: replace torch/torchvision lines with:
+#     torch==2.6.0
+#     torchvision==0.21.0
+# • 'opencv-python-headless' avoids GUI dependencies on servers/CI; swap to 'opencv-python' if you need HighGUI.
+# • The detectron2 pin is the commit used in the provided notebooks; keep it for reproducibility.
+# • If pip has issues resolving the CUDA wheels, install PyTorch first following https://pytorch.org/get-started/locally/
